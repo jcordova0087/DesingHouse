@@ -1,0 +1,514 @@
+Scenario: The test user loads the Your store main page
+Given The test user navigates to the Your Store web page
+When The your store page is loaded
+Then The "Currency" dropdown menu is displayed
+And The contact phone number is displayed
+And The "My Account" dropdown menu is displayed
+And The "Wish List" button is displayed
+And The "Wish list" button displays the amount of items in the wish list
+And The "Shopping cart" button is displayed
+And The "Checkout" button is displayed
+And The search bar is displayed
+And The "shopping cart" button is displayed
+And The "shopping cart" button displays the amount of items in the shopping cart
+And The "shopping cart" button displays the total price of the items in the shopping cart
+And The "shopping cart" button is enabled
+And The "Your store" label is displayed
+And The "Desktops" header is displayed
+And The "Laptops & Notebooks" header is displayed
+And The "Components" header is displayed
+And The "Tablets" header is displayed
+And The "Software" header is displayed
+And The "Phones & PDAs" header is displayed
+And The "Cameras" header is displayed
+And The "MP3" header is displayed
+And A swiper is displayed
+And The "Featured" label is displayed
+And A list with featured items on sale is displayed
+And The "ADD TO CART" button is displayed for each element on the list
+And The "Add to Wish List" button is displayed for each element on the list
+And The "Compare this product" button is displayed for each element on the list
+And A brand swiper is displayed 
+And The "Information" header is displayed
+And The "About Us" label is displayed
+And The "About Us" link is displayed
+And The "Delivery Information" label is displayed
+And The "Delivery Information" link is displayed
+And The "Privacy Policy" label is displayed
+And The "Privacy Policy" link is displayed
+And The "Terms & Conditions" label is displayed
+And The "Terms & Conditions" link is displayed
+And The "Customer Service" header is displayed
+And The "Contact Us" label is displayed
+And The "Contact Us" link is displayed
+And The "Returns" label is displayed
+And The "Returns" link is displayed
+And The "Site Map" label is displayed
+And The "Site Map" link is displayed
+And The "Extras" header is displayed
+And The "Brands" label is displayed
+And The "Brands" link is displayed
+And The "Gift Certificates" label is displayed
+And The "Gift Certificates" link is displayed
+And The "Affiliate" label is displayed
+And The "Affiliate" link is displayed
+And The "Specials" label is displayed
+And The "Specials" link is displayed
+And The "My Account" header is displayed
+And The "My Account" label is displayed
+And The "My Account" link is displayed
+And The "Order History" label is displayed
+And The "Order History" link is displayed
+And The "Wish List" label is displayed
+And The "Wish List" link is displayed
+And The "Newsletter" label is displayed
+And The "Newsletter" link is displayed
+
+
+
+Scenario: The test user clicks the currency dropdown menu in the top menu
+Given The test user has loaded the Your Store web page
+And The "Currency" dropdown menu is displayed
+When The test user clicks the "Currency" button
+Then The dropdown menu is open 
+And The "Euro" dropdown item  is displayed
+And The "Pound Sterling" dropdown item is displayed
+And The "US Dollar" dropdown item is displayed
+
+
+Scenario: The test user clicks the My account dropdown menu in the top menu
+Given The test user has loaded the Your Store web page
+And The "My Account" dropdown menu is displayed
+When The test user clicks the "My Account" button
+Then The dropdown menu is open 
+And The "Register" dropdown item  is displayed
+And The "Login" dropdown item is displayed
+
+
+Scenario: The test user clicks the Wish List button in the top menu
+Given The test user has loaded the Your Store web page
+And The "Wish List" button is displayed
+When The test user clicks the "Wish List" button
+Then The test user is redirected to the account login page
+
+
+Scenario: The test user clicks the Shopping Cart button in the top menu
+Given The test user has loaded the Your Store web page
+And The "Shopping Cart" button is displayed
+When The test user clicks the "Shopping Cart" button
+Then The test user is redirected to the shopping cart page
+
+
+Scenario: The test user clicks the Checkout button in the top menu
+Given The test user has loaded the Your Store web page
+And The "Checkout" button is displayed
+When The test user clicks the "Checkout" button
+Then The test user is redirected to the shopping cart page
+
+
+Scenario: The test user performs a search in the search bar
+Given The test user has loaded the Your Store web page
+And The search bar is displayed
+And The test user inputs a valid string in the search bar
+When The user clicks the search button
+Then The test user is redirected to the search results page
+
+
+Scenario: The test user clicks the shopping cart button when is empty
+Given The test user has loaded the Your Store web page
+And The "shopping cart" button is displayed
+And The shopping cart is empty
+When The test user clicks the "shopping cart" button
+Then The "Your shopping cart is empty!" message is displayed
+
+
+Scenario: The test user clicks the shopping cart button has at least one item
+Given The test user has loaded the Your Store web page
+And The "shopping cart" button is displayed
+And The shopping cart is not empty
+When The test user clicks the "shopping cart" button
+Then The dropdown menu is open
+And The items in the shopping cart are displayed
+And the "Remove" button is displayed
+And The "Sub-Total" label is displayed
+And The Sub-Total amount is displayed
+And The "Eco Tax" label is displayed
+And The amount for eco tax is displayed
+And The "VAT" label is displayed
+And The VAT amount is displayed
+And The "Total" label is displayed
+And The Total amount is displayed
+And The "View Cart" button is displayed
+And The "Checkout" button is displayed
+
+
+Scenario: The test user places the mouse over the Desktops header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Desktops" header is displayed
+And The test user places the mouse over the "Desktops" header
+And The "Desktops" header is highlighted
+And The Desktops dropdown menu is expanded 
+And The "PC" option is displayed
+And The "Mac" option is displayed
+And The "Show All Desktops" option is displayed
+When The test user moves the mouse from the "Desktop" header
+Then The Desktops dropdown menu is not displayed
+
+
+Scenario: The test user places the mouse over the Laptops & Notebooks header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Laptops & Notebooks" header is displayed
+And The test user places the mouse over the "Laptops & Notebooks" header
+And The "Laptops & Notebooks" header is highlighted 
+And The Laptops & Notebooks dropdown menu is expanded
+And The "Macs" option is displayed
+And The "Windows" option is displayed
+And The "Show All Laptops & Notebooks" option is displayed
+When The test user moves the mouse from the "Laptops & Notebooks" header
+Then The Laptops & Notebooks dropdown menu is not displayed 
+
+
+Scenario: The test user places the mouse over the Components header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Components" header is displayed
+And The test user places the mouse over the "Components" header
+And The "Components" header is highlighted  
+And The Components dropdown menu is expanded
+And The "Mice and Trackballs" option is displayed
+And The "Monitors" option is displayed
+And The "Printers" option is displayed
+And The "Scaners" option is displayed
+And The "Web Cameras" option is displayed
+And The "Show All Components" option is displayed
+When The test user moves the mouse from the "Components" header
+Then The Components dropdown menu is not displayed 
+
+
+Scenario: The test user places the mouse over the Tablets header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Tablets" header is displayed
+And The test user places the mouse over the "Tablets" header
+And The "Tablets" header is highlighted  
+When The test user moves the mouse from the "Tablets" header
+Then The "Tablets" header is not highlighted
+
+
+Scenario: The test user places the mouse over the Software header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Software" header is displayed
+And The test user places the mouse over the "Software" header
+And The "Software" header is highlighted 
+When The test user moves the mouse from the "Software" header
+Then The "Software" header is not highlighted
+
+
+Scenario: The test user places the mouse over the Phones & PDAs header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Phones & PDAs" header is displayed
+And The test user places the mouse over the "Phones & PDAs" header
+And The "Phones & PDAs" header is highlighted 
+When The test user moves the mouse from the "Phones & PDAs" header
+Then The "Phones & PDAs" header is not highlighted
+
+
+Scenario: The test user places the mouse over the Cameras header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "Cameras" header is displayed
+And The test user places the mouse over the "Cameras" header
+And The "Cameras" header is highlighted
+When The test user moves the mouse from the "Cameras" header
+Then The "Cameras" header is not highlighted
+
+
+Scenario: The test user places the mouse over the MP3 Players header then moves the mouse from the header
+Given The test user has loaded the Your Store web page
+And The "MP3 Players" header is displayed
+And The test user places the mouse over the "MP3 Players" header
+And The MP3 Players dropdown menu is expanded
+And The "MP3 Players" header is highlighted
+And The "test 11" option is displayed
+And The "test 12" option is displayed
+And The "test 15" option is displayed
+And The "test 16" option is displayed
+And The "test 17" option is displayed
+And The "test 18" option is displayed
+And The "test 19" option is displayed
+And The "test 20" option is displayed
+And The "test 21" option is displayed
+And The "test 22" option is displayed
+And The "test 23" option is displayed
+And The "test 24" option is displayed
+And The "test 4" option is displayed
+And The "test 5" option is displayed
+And The "test 6" option is displayed
+And The "test 7" option is displayed
+And The "test 8" option is displayed
+And The "test 9" option is displayed
+And The "Show All MP3 Players" option is displayed
+When The test user moves the mouse from the "MP3 Players" header
+Then The MP3 Players dropdown menu is not displayed 
+
+
+Scenario: The test user clicks the Desktops header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Desktops" header is displayed
+When The test user clicks the "Desktops" header
+Then The Desktops dropdown menu is expanded 
+And The "PC" option is displayed
+And The "Mac" option is displayed
+And The "Show All Desktops" option is displayed
+And The test user moves the mouse from the "Desktop" header
+And The Desktops dropdown menu remains displayed
+
+
+Scenario: The test user clicks the Laptops & Notebooks header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Laptops & Notebooks" header is displayed
+When The test user clicks the "Laptops & Notebooks" header 
+Then The Laptops & Notebooks dropdown menu is expanded
+And The "Macs" option is displayed
+And The "Windows" option is displayed
+And The "Show All Laptops & Notebooks" option is displayed
+And The test user moves the mouse from the "Laptops & Notebooks" header
+And The Laptops & Notebooks dropdown menu remains displayed 
+
+
+Scenario: The test user clicks the Components header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Components" header is displayed
+When The test user clicks the "Components" header
+Then The Components dropdown menu is expanded
+And The "Mice and Trackballs" option is displayed
+And The "Monitors" option is displayed
+And The "Printers" option is displayed
+And The "Scaners" option is displayed
+And The "Web Cameras" option is displayed
+And The "Show All Components" option is displayed
+And The test user moves the mouse from the "Components" header
+And The Components dropdown menu remains displayed 
+
+
+Scenario: The test user clicks the Tablets header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Tablets" header is displayed
+When The test user clicks the "Tablets" header
+Then The test user is redirected to the tablets category page
+
+
+Scenario: The test user clicks the Software header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Software" header is displayed
+When The test user clicks the "Software" header
+Then The test user is redirected to the software category page
+
+
+Scenario: The test user clicks the the Phones & PDAs header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Phones & PDAs" header is displayed
+When The test user clicks the "Phones & PDAs" header
+Then The test user is redirected to the Phones & PDAs category page
+
+
+Scenario: The test user clicks the Cameras header in the main menu
+Given The test user has loaded the Your Store web page
+And The "Cameras" header is displayed
+When The test user clicks the "Cameras" header
+Then The test user is redirected to the Cameras category page
+
+
+Scenario: The test user clicks the MP3 Players header in the main menu
+Given The test user has loaded the Your Store web page
+And The "MP3 Players" header is displayed
+When The test user clicks the "MP3 Players" header
+Then The MP3 Players dropdown menu is expanded
+And The "test 11" option is displayed
+And The "test 12" option is displayed
+And The "test 15" option is displayed
+And The "test 16" option is displayed
+And The "test 17" option is displayed
+And The "test 18" option is displayed
+And The "test 19" option is displayed
+And The "test 20" option is displayed
+And The "test 21" option is displayed
+And The "test 22" option is displayed
+And The "test 23" option is displayed
+And The "test 24" option is displayed
+And The "test 4" option is displayed
+And The "test 5" option is displayed
+And The "test 6" option is displayed
+And The "test 7" option is displayed
+And The "test 8" option is displayed
+And The "test 9" option is displayed
+And The "Show All MP3 Players" option is displayed
+And The test user moves the mouse from the "MP3 Players" header
+And The MP3 Players dropdown menu remains displayed 
+
+
+Scenario: The test user clicks the previous button in the products swiper
+Given The test user has loaded the Your Store web page
+And The products swiper is displayed
+When The test user clicks the "previous" button in the swiper
+Then The previous element in the swiper is displayed
+
+
+Scenario: The test user clicks the next button in the products swiper
+Given The test user has loaded the Your Store web page
+And The products swiper is displayed
+When The test user clicks the "next" button in the swiper
+Then The previous element in the swiper is displayed
+
+
+Scenario: The test user clicks an item from the featured list 
+Given The test user has loaded the Your Store web page
+And The featured list is displaying at least one product
+When The test user clicks a product from the list
+Then The test user is redirected to the product page
+
+
+Scenario: The test user clicks the Add to cart button from one product in the featured list and the user hasn't login
+Given The test user has loaded the Your Store web page
+And The test user hasn't login
+And The featured list is displaying at least one product
+When The test user clicks the "Add to cart" button
+Then The product is added to the shopping cart
+And The "shopping cart" button displays the amount of items in the shopping cart
+And The "shopping cart" button displays the total price of the items in the shopping cart
+And The "Success: You have added <product> to your shopping cart" message is displayed
+And The close message button is displayed on the right
+
+
+Scenario: The test user clicks the Add to Wish List button from one product in the featured list and the user hasn't login
+Given The test user has loaded the Your Store web page
+And The test user hasn't login
+And The featured list is displaying at least one product
+When The test user clicks the "Add to Wish List" button
+Then The "You must login or create an account to save <product> to your wish list!" message is displayed
+And The close message button is displayed on the right
+
+
+Scenario: The test user clicks the Compare this Product button from one product in the featured list and the user hasn't login
+Given The test user has loaded the Your Store web page
+And The test user hasn't login
+And The featured list is displaying at least one product
+When The test user clicks the "Compare this Product" button
+Then The "Success: You have added <product> to your product comparison" message is displayed
+And The close message button is displayed on the right
+
+
+Scenario: The test user clicks the previous button on the brands swipper
+Given The test user has loaded the Your Store web page
+And The brands swiper is displayed
+When The test user clicks the "previous" button in the swiper
+Then The elements in the swiper move one space to the left
+
+
+Scenario: The test user clicks the next button on the brands swipper
+Given The test user has loaded the Your Store web page
+And The brands swiper is displayed
+When The test user clicks the "next" button in the swiper
+Then The elements in the swiper move one space to the right
+
+
+Scenario: The test user clicks the About Us link
+Given The test user has loaded the Your Store web page
+And The "About Us" link is displayed
+When The test user clicks the "About Us" link
+Then The test user is redirected to the About Us page
+
+
+Scenario: The test user clicks the Delivery Information link
+Given The test user has loaded the Your Store web page
+And The "Delivery Information" link is displayed
+When The test user clicks the "Delivery Information" link
+Then The test user is redirected to the Delivery Information page
+
+
+Scenario: The test user clicks the Privacy Policy link
+Given The test user has loaded the Your Store web page
+And The "Privacy Policy" link is displayed
+When The test user clicks the "Privacy Policy" link
+Then The test user is redirected to the Privacy Policy page
+
+
+Scenario: The test user clicks the Terms & Conditions link
+Given The test user has loaded the Your Store web page
+And The "Terms & Conditions" link is displayed
+When The test user clicks the "Terms & Conditions" link
+Then The test user is redirected to the Terms & Conditions page
+
+
+Scenario: The test user clicks the Contact Us link
+Given The test user has loaded the Your Store web page
+And The "Contact Us" link is displayed
+When The test user clicks the "Contact Us" link
+Then The test user is redirected to the Contact Us page
+
+
+Scenario: The test user clicks the Returns link
+Given The test user has loaded the Your Store web page
+And The "Returns" link is displayed
+When The test user clicks the "Returns" link
+Then The test user is redirected to the Product Returns page
+
+
+Scenario: The test user clicks the Site Map link
+Given The test user has loaded the Your Store web page
+And The "Site Map" link is displayed
+When The test user clicks the "Site Map" link
+Then The test user is redirected to the Site Map page
+
+
+Scenario: The test user clicks the Brands link
+Given The test user has loaded the Your Store web page
+And The "Brands" link is displayed
+When The test user clicks the "Brands" link
+Then The test user is redirected to the Find your Favorite Brand page
+
+
+Scenario: The test user clicks the Gift Certficates link
+Given The test user has loaded the Your Store web page
+And The "Gift Certificates" link is displayed
+When The test user clicks the "Gift Certificates" link
+Then The test user is redirected to the purchase a Gift Certificate page
+
+
+Scenario: The test user clicks the Affiliate link
+Given The test user has loaded the Your Store web page
+And The "Affiliate" link is displayed
+When The test user clicks the "Affiliate" link
+Then The test user is redirected to the Affiliate program page
+
+
+Scenario: The test user clicks the Specials link
+Given The test user has loaded the Your Store web page
+And The "Specials" link is displayed
+When The test user clicks the "Specials" link
+Then The test user is redirected to the gift specials offers page
+
+
+Scenario: The test user clicks the My Account link
+Given The test user has loaded the Your Store web page
+And The "My Account" link is displayed
+When The test user clicks the "My Account" link
+Then The test user is redirected to the Account Login page
+
+
+Scenario: The test user clicks the Order History link
+Given The test user has loaded the Your Store web page
+And The "Order History" link is displayed
+When The test user clicks the "Order History" link
+Then The test user is redirected to the Account Login page
+
+
+Scenario: The test user clicks the Wish List link
+Given The test user has loaded the Your Store web page
+And The "Wish List" link is displayed
+When The test user clicks the "wish List" link
+Then The test user is redirected to the Account Login page
+
+
+Scenario: The test user clicks the Newsletter link
+Given The test user has loaded the Your Store web page
+And The "Newsletter" link is displayed
+When The test user clicks the "Newsletter" link
+Then The test user is redirected to the Account Login page
